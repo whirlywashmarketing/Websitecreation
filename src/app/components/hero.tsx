@@ -2,8 +2,8 @@ import { motion } from 'motion/react';
 import { Phone, ArrowRight, Check } from 'lucide-react';
 import { Button } from './ui/button';
 
-// Use your custom hero image from public/assets folder
-const heroImage = '/images/Hero_Image.jpg';
+// Hero image: stored in public/images/Hero_Image.png, loaded via URL (same as logo)
+const HERO_IMAGE_URL = '/images/Hero_Image.png';
 
 export function Hero() {
   const scrollToEstimate = () => {
@@ -89,8 +89,8 @@ export function Hero() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src={heroImage}
-                alt="Clean residential windows"
+                src={HERO_IMAGE_URL}
+                alt="Whirly Wash team - professional window cleaning"
                 className="w-full h-[500px] object-cover"
               />
               

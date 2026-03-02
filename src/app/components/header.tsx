@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { Phone, Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 
-// Use your custom logo from public/assets folder
-const logo = '/images/Logo.png';
+// Logo: stored in public/images/Logo.png, loaded via URL (e.g. /images/Logo.png in git/deploy)
+const LOGO_URL = '/images/Logo.png';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,7 +35,7 @@ export function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <img src={logo} alt="Whirly Wash" className="h-12" />
+            <img src={LOGO_URL} alt="Whirly Wash" className="h-12" />
           </div>
 
           {/* Desktop Navigation */}
