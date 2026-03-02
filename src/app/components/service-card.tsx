@@ -18,6 +18,7 @@ interface ServiceCardProps {
   checklist?: ChecklistItem[];
   footerNote?: string;
   highlighted?: boolean;
+  scrollTarget?: string;
 }
 
 export function ServiceCard({ 
@@ -30,10 +31,11 @@ export function ServiceCard({
   badge,
   checklist,
   footerNote,
-  highlighted = false
+  highlighted = false,
+  scrollTarget = 'estimate'
 }: ServiceCardProps) {
-  const scrollToEstimate = () => {
-    const element = document.getElementById('estimate');
+  const scrollToSection = () => {
+    const element = document.getElementById(scrollTarget);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -97,7 +99,7 @@ export function ServiceCard({
           <Button
             variant="ghost"
             className="text-[#1F3C88] hover:text-[#152a5e] p-0 h-auto"
-            onClick={scrollToEstimate}
+            onClick={scrollToSection}
           >
             Learn More
             <ArrowRight className="ml-2 w-4 h-4" />

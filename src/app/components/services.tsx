@@ -24,6 +24,7 @@ export function Services() {
       image: windowCleaningImage,
       objectPosition: 'object-[center_65%]',
       fallbackImage: windowCleaningFallback,
+      scrollTarget: 'pricing-comparison',
     },
     {
       icon: '',
@@ -31,6 +32,7 @@ export function Services() {
       description: 'Streak-free interior windows that make your home feel bright and welcoming.',
       image: interiorWindowImage,
       fallbackImage: interiorWindowFallback,
+      scrollTarget: 'pricing-comparison',
     },
     {
       icon: '',
@@ -39,6 +41,7 @@ export function Services() {
       image: screenCleaningImage,
       objectPosition: 'object-[center_65%]',
       fallbackImage: screenCleaningFallback,
+      scrollTarget: 'pricing-comparison',
     },
     {
       icon: '',
@@ -46,6 +49,7 @@ export function Services() {
       description: 'Safe and effective skylight cleaning that brightens up your entire home.',
       image: skylightCleaningImage,
       fallbackImage: skylightCleaningFallback,
+      scrollTarget: 'pricing-comparison',
     },
     {
       icon: '',
@@ -53,12 +57,14 @@ export function Services() {
       description: 'Transform your driveway, siding, and deck with our professional pressure washing services.',
       image: powerWashingImage,
       fallbackImage: powerWashingFallback,
+      scrollTarget: 'pricing-comparison',
     },
     {
       icon: '',
       title: 'Holiday Lighting',
       description: 'Professional holiday lighting installation and removal. Make your home shine this season.',
       image: 'https://images.unsplash.com/photo-1765242115312-7a27f513ec03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob2xpZGF5JTIwbGlnaHRpbmclMjBjaHJpc3RtYXMlMjBob3VzZXxlbnwxfHx8fDE3NzIzMDQ3NDN8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      scrollTarget: 'pricing-comparison',
     },
   ];
 
@@ -76,6 +82,7 @@ export function Services() {
       ],
       footerNote: 'No discount. No bonus benefits.',
       highlighted: false,
+      scrollTarget: 'estimate',
     },
     {
       icon: '',
@@ -90,6 +97,7 @@ export function Services() {
       ],
       footerNote: 'Discount included. No bonus services.',
       highlighted: false,
+      scrollTarget: 'estimate',
     },
     {
       icon: '',
@@ -104,6 +112,7 @@ export function Services() {
       ],
       footerNote: 'Discount + bonus benefits included.',
       highlighted: true,
+      scrollTarget: 'estimate',
     },
   ];
 
@@ -143,6 +152,7 @@ export function Services() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
+            id="pricing-comparison"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
