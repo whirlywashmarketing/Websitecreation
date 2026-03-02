@@ -1,10 +1,19 @@
 import { motion } from 'motion/react';
 import { ServiceCard } from './service-card';
-import windowCleaningImage from 'figma:asset/2bc2e546e3fa7ac717c02d833b99fdec7166aea5.png';
-import interiorWindowImage from 'figma:asset/ae4c2b70749b41efb37b4aec776649aa6dd47718.png';
-import screenCleaningImage from 'figma:asset/7027b1ad002627514ca6ca1d2e0249502dc53da7.png';
-import skylightCleaningImage from 'figma:asset/28599dba92dd7aace354ca6fa32855e627a1d8ed.png';
-import powerWashingImage from 'figma:asset/c8ea79bea63d8da910bb8fdff3767efc9f3ed2e3.png';
+
+// Use your custom service images from public/assets folder
+const windowCleaningImage = '/assets/Exterior window cleaning.JPEG';
+const interiorWindowImage = '/assets/Interior window cleaning.jpeg';
+const screenCleaningImage = '/assets/screen cleaning.JPG';
+const skylightCleaningImage = '/assets/Skylight cleaning.JPEG';
+const powerWashingImage = '/assets/powerwashing.JPEG';
+
+// Fallback images for preview (will use your real images on Netlify)
+const windowCleaningFallback = 'https://images.unsplash.com/photo-1761689502577-0013be84f1bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxleHRlcmlvciUyMHdpbmRvdyUyMGNsZWFuaW5nJTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc3MjQ3NTYxNnww&ixlib=rb-4.1.0&q=80&w=1080';
+const interiorWindowFallback = 'https://images.unsplash.com/photo-1762500825301-569628303acb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbnRlcmlvciUyMHdpbmRvdyUyMGNsZWFuaW5nJTIwaG9tZXxlbnwxfHx8fDE3NzI0NzU2MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080';
+const screenCleaningFallback = 'https://images.unsplash.com/photo-1607355298884-7663019fa61e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3aW5kb3clMjBzY3JlZW4lMjBjbGVhbmluZyUyMG1lc2h8ZW58MXx8fHwxNzcyNDc1NjE2fDA&ixlib=rb-4.1.0&q=80&w=1080';
+const skylightCleaningFallback = 'https://images.unsplash.com/photo-1527270997612-014349a46e9c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxza3lsaWdodCUyMHdpbmRvdyUyMGNsZWFuaW5nJTIwcm9vZnxlbnwxfHx8fDE3NzI0NzU2MTd8MA&ixlib=rb-4.1.0&q=80&w=1080';
+const powerWashingFallback = 'https://images.unsplash.com/photo-1735399588751-3cdd6effeac4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmVzc3VyZSUyMHdhc2hpbmclMjBob3VzZSUyMGV4dGVyaW9yfGVufDF8fHx8MTc3MjQ3NTYyMXww&ixlib=rb-4.1.0&q=80&w=1080';
 
 export function Services() {
   const services = [
@@ -14,12 +23,14 @@ export function Services() {
       description: 'Sparkling clean windows that let the light shine through. We remove dirt, grime, and hard water stains.',
       image: windowCleaningImage,
       objectPosition: 'object-[center_65%]',
+      fallbackImage: windowCleaningFallback,
     },
     {
       icon: '',
       title: 'Interior Window Cleaning',
       description: 'Streak-free interior windows that make your home feel bright and welcoming.',
       image: interiorWindowImage,
+      fallbackImage: interiorWindowFallback,
     },
     {
       icon: '',
@@ -27,18 +38,21 @@ export function Services() {
       description: 'Professional screen cleaning and repair service to improve air flow and visibility.',
       image: screenCleaningImage,
       objectPosition: 'object-[center_65%]',
+      fallbackImage: screenCleaningFallback,
     },
     {
       icon: '',
       title: 'Skylight Cleaning',
       description: 'Safe and effective skylight cleaning that brightens up your entire home.',
       image: skylightCleaningImage,
+      fallbackImage: skylightCleaningFallback,
     },
     {
       icon: '',
       title: 'Power Washing',
       description: 'Transform your driveway, siding, and deck with our professional pressure washing services.',
       image: powerWashingImage,
+      fallbackImage: powerWashingFallback,
     },
     {
       icon: '',

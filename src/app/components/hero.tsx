@@ -1,8 +1,10 @@
-import image_d02a4e56cfa8f074d700b4693aad210dfb4c739d from 'figma:asset/d02a4e56cfa8f074d700b4693aad210dfb4c739d.png'
 import { motion } from 'motion/react';
 import { Phone, ArrowRight, Check } from 'lucide-react';
 import { Button } from './ui/button';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+
+// Use your custom hero image from public/assets folder
+const heroImage = '/assets/Hero Image.jpg';
 
 export function Hero() {
   const scrollToEstimate = () => {
@@ -88,7 +90,7 @@ export function Hero() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <ImageWithFallback
-                src={image_d02a4e56cfa8f074d700b4693aad210dfb4c739d}
+                src={heroImage}
                 alt="Clean residential windows"
                 className="w-full h-[500px] object-cover"
               />

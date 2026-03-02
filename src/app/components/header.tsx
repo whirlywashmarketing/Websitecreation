@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Phone, Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
-import logo from 'figma:asset/c881332f2cc51c7fd1d44ccfd573d7eafafaf317.png';
+
+// Use your custom logo from public/assets folder
+const logo = '/assets/Logo.png';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);

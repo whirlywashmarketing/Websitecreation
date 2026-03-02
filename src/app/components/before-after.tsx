@@ -1,9 +1,13 @@
-import image_2bc2e546e3fa7ac717c02d833b99fdec7166aea5 from 'figma:asset/2bc2e546e3fa7ac717c02d833b99fdec7166aea5.png'
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from './ui/button';
-import beforeAfterImage from 'figma:asset/39e2340f7aa6994865d43f4392da9012f6cd3189.png';
+
+// Use your custom before/after images from public/assets folder
+const beforeImage1 = '/assets/DSC_1527.JPG';
+const afterImage1 = '/assets/DSC_1973.JPG';
+const beforeImage2 = '/assets/DSC_1994.JPG';
+const afterImage2 = '/assets/2025-08-25.jpg';
 
 export function BeforeAfter() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -11,14 +15,14 @@ export function BeforeAfter() {
 
   const comparisons = [
     {
-      before: beforeAfterImage,
-      after: beforeAfterImage,
+      before: beforeImage1,
+      after: afterImage1,
       title: 'Professional Window Cleaning',
       hasTag: true,
     },
     {
-      before: 'https://images.unsplash.com/photo-1771079258782-b7212c442141?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMHJlc2lkZW50aWFsJTIwd2luZG93cyUyMGV4dGVyaW9yfGVufDF8fHx8MTc3MjMwNDc0MXww&ixlib=rb-4.1.0&q=80&w=1080',
-      after: 'https://images.unsplash.com/photo-1771970472769-8038fd7309c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbnRlcmlvciUyMHdpbmRvd3MlMjBjbGVhbiUyMG1vZGVybnxlbnwxfHx8fDE3NzIzMDQ3NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      before: beforeImage2,
+      after: afterImage2,
       title: 'Power Washing & Window Service',
       hasTag: false,
     },
@@ -73,7 +77,7 @@ export function BeforeAfter() {
             >
               {/* After Image (Background) */}
               <img
-                src={image_2bc2e546e3fa7ac717c02d833b99fdec7166aea5}
+                src={comparisons[currentSlide].after}
                 alt="After"
                 className="absolute inset-0 w-full h-full object-cover"
               />

@@ -1,15 +1,17 @@
 import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
+import { ImageWithFallback } from './figma/ImageWithFallback';
 
 interface ServiceCardProps {
   icon: string;
   title: string;
   description: string;
   image: string;
+  fallbackImage?: string;
   objectPosition?: string;
 }
 
-export function ServiceCard({ icon, title, description, image, objectPosition = 'object-[center_30%]' }: ServiceCardProps) {
+export function ServiceCard({ icon, title, description, image, fallbackImage, objectPosition = 'object-[center_30%]' }: ServiceCardProps) {
   const scrollToEstimate = () => {
     const element = document.getElementById('estimate');
     if (element) {
@@ -20,8 +22,9 @@ export function ServiceCard({ icon, title, description, image, objectPosition = 
   return (
     <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group h-full flex flex-col">
       <div className="relative h-48 overflow-hidden">
-        <img
+        <ImageWithFallback
           src={image}
+          fallbackSrc={fallbackImage}
           alt={title}
           className={`w-full h-full object-cover ${objectPosition} group-hover:scale-105 transition-transform duration-300`}
         />
