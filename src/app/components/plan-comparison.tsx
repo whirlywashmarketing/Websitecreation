@@ -6,7 +6,7 @@ const pricingPlans = [
     icon: '',
     title: 'ONE-TIME SERVICE',
     description: 'Single visit exterior cleaning with no recurring benefits or loyalty incentives.',
-    badge: 'PRIMARY SERVICE',
+    badge: undefined,
     checklist: [
       { text: 'No discount', included: false },
       { text: 'No free RainBlock technology', included: false },
@@ -61,7 +61,7 @@ export function PlanComparison() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Service Plans Comparison</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Service Plans</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Choose the plan that fits your needs and budget
           </p>
@@ -75,8 +75,9 @@ export function PlanComparison() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
+              className="rounded-2xl ring-2 ring-[#1F3C88]"
             >
-              <ServiceCard {...plan} />
+              <ServiceCard {...plan} ctaLabel="Learn more" />
             </motion.div>
           ))}
         </div>

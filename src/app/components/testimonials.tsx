@@ -134,6 +134,7 @@ export function Testimonials() {
               variant="outline"
               size="icon"
               className="rounded-full"
+              aria-label="Previous testimonial"
             >
               <ChevronLeft className="w-5 h-5" />
             </Button>
@@ -142,21 +143,31 @@ export function Testimonials() {
               variant="outline"
               size="icon"
               className="rounded-full"
+              aria-label="Next testimonial"
             >
               <ChevronRight className="w-5 h-5" />
             </Button>
           </div>
 
-          {/* Dots Indicator */}
-          <div className="flex justify-center gap-2 mt-4">
+          {/* Dots Indicator - min 44px touch targets for accessibility */}
+          <div className="flex justify-center gap-3 mt-4" role="tablist" aria-label="Testimonial slides">
             {testimonials.map((_, index) => (
               <button
                 key={index}
+                type="button"
+                role="tab"
+                aria-label={`Go to testimonial ${index + 1}`}
+                aria-selected={index === currentIndex}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 rounded-full transition-colors ${
-                  index === currentIndex ? 'bg-[#1F3C88]' : 'bg-gray-300'
-                }`}
-              />
+                className="min-w-11 min-h-11 flex items-center justify-center rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1F3C88] focus-visible:ring-offset-2"
+              >
+                <span
+                  className={`block w-2 h-2 rounded-full transition-colors ${
+                    index === currentIndex ? 'bg-[#1F3C88]' : 'bg-gray-300'
+                  }`}
+                  aria-hidden
+                />
+              </button>
             ))}
           </div>
         </div>

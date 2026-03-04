@@ -42,31 +42,25 @@ export function Header() {
           <nav className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection('services')}
-              className="text-gray-700 hover:text-[#1F3C88] transition-colors"
+              className="text-gray-700 hover:text-[#1F3C88] font-medium py-2 px-3 rounded-md hover:bg-[#1F3C88]/10 hover:underline underline-offset-4 decoration-2 transition-colors transition-shadow"
             >
               Services
             </button>
             <button
-              onClick={() => scrollToSection('before-after')}
-              className="text-gray-700 hover:text-[#1F3C88] transition-colors"
-            >
-              Our Work
-            </button>
-            <button
               onClick={() => scrollToSection('why-choose')}
-              className="text-gray-700 hover:text-[#1F3C88] transition-colors"
+              className="text-gray-700 hover:text-[#1F3C88] font-medium py-2 px-3 rounded-md hover:bg-[#1F3C88]/10 hover:underline underline-offset-4 decoration-2 transition-colors transition-shadow"
             >
               Why Us
             </button>
             <button
               onClick={() => scrollToSection('testimonials')}
-              className="text-gray-700 hover:text-[#1F3C88] transition-colors"
+              className="text-gray-700 hover:text-[#1F3C88] font-medium py-2 px-3 rounded-md hover:bg-[#1F3C88]/10 hover:underline underline-offset-4 decoration-2 transition-colors transition-shadow"
             >
               Reviews
             </button>
             <button
               onClick={() => scrollToSection('service-area')}
-              className="text-gray-700 hover:text-[#1F3C88] transition-colors"
+              className="text-gray-700 hover:text-[#1F3C88] font-medium py-2 px-3 rounded-md hover:bg-[#1F3C88]/10 hover:underline underline-offset-4 decoration-2 transition-colors transition-shadow"
             >
               Service Area
             </button>
@@ -100,34 +94,28 @@ export function Header() {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-1">
               <button
                 onClick={() => scrollToSection('services')}
-                className="text-left text-gray-700 hover:text-[#1F3C88] transition-colors"
+                className="text-left text-gray-700 hover:text-[#1F3C88] font-medium py-3 px-3 rounded-md hover:bg-[#1F3C88]/10 transition-colors"
               >
                 Services
               </button>
               <button
-                onClick={() => scrollToSection('before-after')}
-                className="text-left text-gray-700 hover:text-[#1F3C88] transition-colors"
-              >
-                Our Work
-              </button>
-              <button
                 onClick={() => scrollToSection('why-choose')}
-                className="text-left text-gray-700 hover:text-[#1F3C88] transition-colors"
+                className="text-left text-gray-700 hover:text-[#1F3C88] font-medium py-3 px-3 rounded-md hover:bg-[#1F3C88]/10 transition-colors"
               >
                 Why Us
               </button>
               <button
                 onClick={() => scrollToSection('testimonials')}
-                className="text-left text-gray-700 hover:text-[#1F3C88] transition-colors"
+                className="text-left text-gray-700 hover:text-[#1F3C88] font-medium py-3 px-3 rounded-md hover:bg-[#1F3C88]/10 transition-colors"
               >
                 Reviews
               </button>
               <button
                 onClick={() => scrollToSection('service-area')}
-                className="text-left text-gray-700 hover:text-[#1F3C88] transition-colors"
+                className="text-left text-gray-700 hover:text-[#1F3C88] font-medium py-3 px-3 rounded-md hover:bg-[#1F3C88]/10 transition-colors"
               >
                 Service Area
               </button>

@@ -17,7 +17,7 @@ export function SocialProof() {
     },
     {
       icon: Home,
-      value: '100+',
+      value: '500+',
       label: 'Homes Serviced',
       subtext: 'In Lake County',
     },

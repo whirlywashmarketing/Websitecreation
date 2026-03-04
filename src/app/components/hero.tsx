@@ -27,7 +27,7 @@ export function Hero() {
               Crystal Clear Windows. A{"\u00A0"}Cleaner Home. Zero Hassle.
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Professional window cleaning & exterior washing serving Lake County.
+              Professional window cleaning serving Lake County.
             </p>
             
             {/* CTAs */}

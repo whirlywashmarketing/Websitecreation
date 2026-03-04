@@ -17,10 +17,10 @@ export function Footer() {
             <h3 className="text-2xl font-bold text-white mb-4">Whirly Wash</h3>
             <p className="text-gray-400 mb-4">Lake County's trusted exterior cleaning company.</p>
             <div className="flex gap-4">
-              <a href="https://www.facebook.com/p/Whirly-Wash-61565659395544/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.facebook.com/p/Whirly-Wash-61565659395544/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" aria-label="Whirly Wash on Facebook">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="https://www.instagram.com/whirlywash.llc/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.instagram.com/whirlywash.llc/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" aria-label="Whirly Wash on Instagram">
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
@@ -51,7 +51,7 @@ export function Footer() {
                   onClick={() => scrollToSection('services')}
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Power Washing
+                  Gutter Cleaning
                 </button>
               </li>
               <li>

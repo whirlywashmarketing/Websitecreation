@@ -122,6 +122,7 @@ export function BeforeAfter() {
                   variant="outline"
                   size="icon"
                   className="rounded-full"
+                  aria-label="Previous before and after comparison"
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </Button>
@@ -130,6 +131,7 @@ export function BeforeAfter() {
                   variant="outline"
                   size="icon"
                   className="rounded-full"
+                  aria-label="Next before and after comparison"
                 >
                   <ChevronRight className="w-5 h-5" />
                 </Button>

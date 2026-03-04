@@ -19,6 +19,7 @@ interface ServiceCardProps {
   footerNote?: string;
   highlighted?: boolean;
   scrollTarget?: string;
+  ctaLabel?: string;
 }
 
 export function ServiceCard({ 
@@ -32,7 +33,8 @@ export function ServiceCard({
   checklist,
   footerNote,
   highlighted = false,
-  scrollTarget = 'estimate'
+  scrollTarget = 'estimate',
+  ctaLabel = 'Learn More',
 }: ServiceCardProps) {
   const scrollToSection = () => {
     const element = document.getElementById(scrollTarget);
@@ -101,7 +103,7 @@ export function ServiceCard({
             className="text-[#1F3C88] hover:text-[#152a5e] p-0 h-auto"
             onClick={scrollToSection}
           >
-            Learn More
+            {ctaLabel}
             <ArrowRight className="ml-2 w-4 h-4" />
           </Button>
         </div>
