@@ -60,6 +60,10 @@ export function ServiceCard({
             fallbackSrc={fallbackImage}
             alt={title}
             className={`w-full h-full object-cover ${objectPosition} group-hover:scale-105 transition-transform duration-300`}
+            width={400}
+            height={192}
+            loading="lazy"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent mx-[0px] mt-[100px] mb-[0px]" />
           <div className="absolute bottom-4 left-4 text-4xl">{icon}</div>

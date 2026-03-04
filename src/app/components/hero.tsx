@@ -92,6 +92,10 @@ export function Hero() {
                 src={HERO_IMAGE_URL}
                 alt="Whirly Wash team - professional window cleaning"
                 className="w-full h-[500px] object-cover"
+                width={1080}
+                height={500}
+                fetchPriority="high"
+                decoding="async"
               />
               
             </div>

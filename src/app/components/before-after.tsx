@@ -80,6 +80,10 @@ export function BeforeAfter() {
                 src={comparisons[currentSlide].after}
                 alt="After"
                 className="absolute inset-0 w-full h-full object-cover"
+                width={1080}
+                height={500}
+                loading="lazy"
+                decoding="async"
               />
 
               {/* Before Image (Foreground with clip) */}
@@ -91,6 +95,10 @@ export function BeforeAfter() {
                   src={comparisons[currentSlide].before}
                   alt="Before"
                   className="absolute inset-0 w-full h-full object-cover"
+                  width={1080}
+                  height={500}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
 
