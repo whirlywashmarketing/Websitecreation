@@ -35,7 +35,7 @@ export function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <img src={LOGO_URL} alt="Whirly Wash" className="h-12 w-auto" width={140} height={48} decoding="async" />
+            <img src={LOGO_URL} alt="Whirly Wash" className="h-24 w-auto" width={280} height={96} decoding="async" />
           </div>
 
           {/* Desktop Navigation */}
